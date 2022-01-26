@@ -1,0 +1,83 @@
+import muscles from "../../assets/images/muscles/Muscles.png";
+import React from "react";
+import { ChildSystem } from "../../components/AbstractSystem/ChildSystem/ChildSystem";
+import { BreadcrumbsComponent } from "../../components/Breadcrumbs/Breadcrumbs";
+
+export class Muscles extends React.Component {
+  pathElements = [
+    {
+      id: 1,
+      d: "m 386.14628,1179.9912 c 16.46537,24.5439 38.67065,43.348 39.51264,83.5153 0.16433,28.6915 2.13804,57.9861 -4.49008,84.4134 l -27.83845,-76.3312 c -10.23371,-32.1003 -8.61944,-61.831 -7.18411,-91.5975 z",
+      fill: "#b59247",
+    },
+    {
+      id: 2,
+      d: "m 258.63457,1176.8163 c -16.46537,24.5439 -38.67065,43.348 -39.51264,83.5153 -0.16433,28.6915 -2.13804,57.9861 4.49008,84.4134 l 27.83845,-76.3312 c 10.23371,-32.1003 8.61944,-61.831 7.18411,-91.5975 z",
+      fill: "#b59247",
+    },
+    {
+      id: 3,
+      d: "m 440.68459,930.26359 15.87481,202.56251 c -17.78206,-28.7846 -36.03224,-57.2181 -40.6395,-95.8838 -5.94104,-43.91012 1.92052,-79.70107 24.76469,-106.67871 z",
+      fill: "#b59247",
+    },
+    {
+      id: 4,
+      d: "m 203.19629,932.80356 -15.87481,202.56254 c 17.78206,-28.7846 36.03224,-57.2181 40.6395,-95.8838 5.94104,-43.91015 -1.92052,-79.7011 -24.76469,-106.67874 z",
+      fill: "#b59247",
+    },
+    {
+      id: 5,
+      d: "m 290.82643,438.77962 55.87932,0 1.26998,38.73452 h -55.24432 z",
+      fill: "#b59247",
+    },
+  ];
+
+  cards = [
+    {
+      id: 1,
+      description: "Икроножная мышца сгибает ногу",
+      src: "",
+      show: false,
+    },
+    {
+      id: 2,
+      description: "Икроножная мышца сгибает ногу",
+      src: "",
+      show: false,
+    },
+    {
+      id: 3,
+      description: "Мышца бедра выпрямляет ногу",
+      src: "",
+      show: false,
+    },
+    {
+      id: 4,
+      description: "Мышца бедра выпрямляет ногу",
+      src: "",
+      show: false,
+    },
+    {
+      id: 5,
+      description: "Мышцы шеи держат голову ровно и отвечают за повороты в разные стороны",
+      src: "",
+      show: false,
+    },
+  ];
+  render() {
+    return (
+      <div className="muscles">
+        <BreadcrumbsComponent />
+        <h1>Мышечная</h1>
+        <div className="content">
+          <ChildSystem
+            viewbox={"0 0 645.63379 1490.7042"}
+            cards={this.cards}
+            pathElements={this.pathElements}
+            mainImg={muscles}
+          />
+        </div>
+      </div>
+    );
+  }
+}

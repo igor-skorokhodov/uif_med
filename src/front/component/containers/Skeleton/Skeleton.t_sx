@@ -1,0 +1,66 @@
+import skeleton from "../../assets/images/skeleton/skeleton.svg";
+import spine from "../../assets/images/skeleton/pngtree-cervical-spine-image_2248395.png";
+import skull from "../../assets/images/skeleton/skull.png";
+import pelvis from "../../assets/images/skeleton/pelvis.png";
+import React from "react";
+import { ChildSystem } from "../../components/AbstractSystem/ChildSystem/ChildSystem";
+import { BreadcrumbsComponent } from "../../components/Breadcrumbs/Breadcrumbs";
+
+export class Skeleton extends React.Component {
+  pathElements = [
+    {
+      id: 1,
+      d: "m 66.36385,30.814065 h 77.35927 l 0.55655,93.833405 -77.359277,-1.1803 z",
+      fill: "#b59247",
+    },
+    {
+      id: 2,
+      d: "m 66.894438,132.81602 h 77.359272 l 0.55655,120.76439 -77.359279,-1.51906 z",
+      fill: "#b59247",
+    },
+    {
+      id: 3,
+      d: "m 73.751765,254.15176 h 64.731765 l -3.71412,28.65177 -55.711763,0.53059 z",
+      fill: "#b59247",
+    },
+  ];
+
+  cards = [
+    {
+      id: 1,
+      description: " Череп - это кости головы, они крепко соеденины между собой, поэтому череп очень крепкий",
+      src: skull,
+      show: false,
+    },
+    {
+      id: 2,
+      description: "Позвоночник - стержень всего организма. Он состоит из маленьких косточек - позвонков. Между собой позвонки соединяются, как бусинки, с помощью суставов и связок.",
+      src: spine,
+      show: false,
+    },
+    {
+      id: 3,
+      description: "  Таз (лат. pelvis) — расположенная в основании позвоночника часть скелета человека",
+      src: pelvis,
+      show: false,
+    },
+  ];
+
+  render() {
+    return (
+      <div className="skeleton">
+        <BreadcrumbsComponent />
+        <h1>Скелетная</h1>
+        <div className="content">
+          <ChildSystem
+            viewbox={"0 0 211 451"}
+            cards={this.cards}
+            pathElements={this.pathElements}
+            mainImg={skeleton}
+          />
+        </div>
+      </div>
+    );
+  }
+}
+

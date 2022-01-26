@@ -1,0 +1,112 @@
+.mainTitle {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 4rem;
+  text-transform: uppercase;
+  margin: 35px auto;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  grid-row-gap: 100px;
+}
+
+.item {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 200px;
+  transition: 0.4s ease-in-out;
+
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail {
+  border-radius: 50px;
+  height: 405px;
+  width: 245px;
+  text-align: center;
+  padding: 32px;
+  margin-left: -21px;
+}
+
+.item img {
+  margin: -129px;
+  height: 380px;
+  transition: 0.4s ease-in-out;
+}
+
+.content h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 120%;
+  color: black;
+  width: 50%;
+  height: 46px;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+}
+
+.cards {
+  width: 100%;
+}
+
+.homePage {
+  width: 85%;
+  margin-top: -418px;
+}
+
+.homePageMarginTop {
+  width: 85%;
+  margin-top: -418px;
+}
+
+.button {
+  width: 33px;
+  height: 16px;
+  border: none;
+  background: inherit;
+  background-image: url(./../../../assets/images/home/arrow1.svg);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 165px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 647px) {
+  .thumbnail {
+    width: 240px;
+  }
+
+  .item {
+    width: 100%;
+    margin-top: -140px;
+  }
+
+  .items {
+    grid-row-gap: 230px;
+  }
+}

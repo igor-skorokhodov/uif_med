@@ -1,0 +1,51 @@
+import breathing from "../../assets/images/breathing/Breathing.png";
+import lungs from "../../assets/images/breathing/lung_PNG62.png";
+import React from "react";
+import { ChildSystem } from "../../components/AbstractSystem/ChildSystem/ChildSystem";
+import { BreadcrumbsComponent } from "../../components/Breadcrumbs/Breadcrumbs";
+
+export class Breathing extends React.Component {
+  pathElements = [
+    {
+      id: 1,
+      d: "m 232.49821,577.61274 165.2917,-3.63278 9.08196,212.5179 -181.63923,0 z",
+      fill: "#b59247",
+    },
+    {
+      id: 2,
+      d: "m 294.25555,337.39487 -7.71967,24.06719 41.32293,12.26065 7.26557,-25.42949 z",
+      fill: "#b59247",
+    },
+  ];
+
+  cards = [
+    {
+      id: 1,
+      description: "  Легкие - это главный орган дыхания. Воздух поступает в них по длинным трубкам - трахея и бронхам. Когда мы делаем вдох легкие наполняются воздухом, а когда выдох - воздух выходит из легких и они уменьшаются.",
+      src: lungs,
+      show: false,
+    },
+    {
+      id: 2,
+      description: "Носом мы вдыхаем воздух. Внутри носа есть волоски, которыe задерживают пыль и микробы, чтобы они не попали в организм.",
+      src: "",
+      show: false,
+    },
+  ];
+  render() {
+    return (
+      <div className="breathing">
+        <BreadcrumbsComponent />
+        <h1>Дыхательная</h1>
+        <div className="content">
+          <ChildSystem
+            viewbox={"0 0 659.15491 1507.6056"}
+            cards={this.cards}
+            pathElements={this.pathElements}
+            mainImg={breathing}
+          />
+        </div>
+      </div>
+    );
+  }
+}

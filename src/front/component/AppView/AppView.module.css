@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__content{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 70px;
+  margin-bottom: 65px;
+}
+
+@media screen and (max-width: 1187px) {
+  .header__content {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+.header__text{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+
+.header__text h1{
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.breadcrumbs{
+  margin-bottom: 30px;
+  display: none;
+}

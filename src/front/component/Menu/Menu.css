@@ -1,0 +1,204 @@
+.menu_container {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  height: 96px;
+  gap: 30px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu_text {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 120%;
+  color: black;
+  text-align: start;
+}
+
+.switch-btn {
+  display: inline-block;
+  min-width: 176px; /* ширина переключателя */
+  height: 96px; /* высота переключателя */
+  border-radius: 67px; /* радиус скругления */
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms;
+  opacity: 0.3; /* анимация */
+}
+
+.switch-btn::after {
+  content: "";
+  height: 80px; /* высота кнопки */
+  width: 80px; /* ширина кнопки */
+  border-radius: 50px; /* радиус кнопки */
+  background: #fff; /* цвет кнопки */
+  top: 7px; /* положение кнопки по вертикали относительно основы */
+  left: 5px; /* положение кнопки по горизонтали относительно основы */
+  transition-duration: 300ms; /* анимация */
+  box-shadow: 0 0 10px 0 #999999; /* тень */
+  position: absolute;
+  z-index: 1;
+  background-position: center;
+}
+
+.switch-btn-skeleton::after {
+  background-image: url("../../assets/images/skeleton/skelt_mask.svg");
+}
+
+.switch-btn-muscles::after {
+  background-image: url("../../assets/images/muscles/musc_mask.svg");
+}
+.switch-btn-nerves::after {
+  background-image: url("../../assets/images/nerves/nerve_mask.svg");
+}
+.switch-btn-heart::after {
+  background-image: url("../../assets/images/heart/heart_mask.svg");
+}
+.switch-btn-digestion::after {
+  background-image: url("../../assets/images/digestion/digestion_mask.svg");
+}
+.switch-btn-breathing::after {
+  background-image: url("../../assets/images/breathing/breathing_mask.svg");
+}
+
+.switch-on {
+  box-shadow: inset 0 0 10px 0 #999999;
+  transition-duration: 300ms;
+  opacity: 1;
+}
+
+.switch-on::after {
+  left: 87px;
+}
+
+.switch-off::after{
+  left: 0px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    row-gap: normal;
+  }
+
+  .menu_text {
+    display: none;
+  }
+
+  .menu_container {
+    width: 140px;
+  }
+
+  .switch-btn {
+    min-width: 140px;
+  }
+
+  .switch-on::after {
+    left: 53px;
+    transition-duration: 300ms;
+    animation: anim 0.5s;
+  }
+}
+
+.muscles {
+  background: linear-gradient(
+    180deg,
+    #93e1dd 0%,
+    #c3fdfc 34.2%,
+    #93eaed 60.72%,
+    #9ae0de 100%
+  );
+}
+
+.nerves {
+  background: linear-gradient(
+    180deg,
+    #fdb4c8 0%,
+    #ffcfdd 34.2%,
+    #fba6b9 60.72%,
+    #f9b4c9 100%
+  );
+}
+
+.digestion {
+  background: linear-gradient(
+    180deg,
+    #c182dd 0%,
+    #d69bee 34.2%,
+    #c89edd 60.72%,
+    #ca9fe0 100%
+  );
+}
+
+.breathing {
+  background: linear-gradient(
+    180deg,
+    #74b3ec 0%,
+    #8fcaff 34.2%,
+    #5baef4 60.72%,
+    #68b4f7 100%
+  );
+}
+
+.heart {
+  background: linear-gradient(
+    180deg,
+    #ff725f 0%,
+    #ffa68a 39.8%,
+    #f97c46 65.63%,
+    #ff8660 100%
+  );
+}
+
+.skeleton {
+  background: linear-gradient(
+    180deg,
+    #ffc05f 0%,
+    #ffd68a 39.8%,
+    #f9ae46 65.63%,
+    #ffc460 100%
+  );
+}
+
+.background_body {
+  background: url("../../assets/images/background.png");
+}
+
+.background_body_home {
+  background: linear-gradient(
+    180deg,
+    rgba(147, 225, 221, 0.05) 0%,
+    rgba(195, 253, 252, 0.05) 34.2%,
+    rgba(147, 234, 237, 0.05) 60.72%,
+    rgba(154, 224, 222, 0.05) 100%
+  );
+}
+
+@media screen and (max-width: 1620px) {
+  .menu_text {
+    display: none;
+  }
+
+  .menu_container {
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .menu_container {
+    width: 140px;
+  }
+}
